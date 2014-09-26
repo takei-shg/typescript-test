@@ -7,7 +7,7 @@ checkout:
     - git config --global user.name circleci
     - git config --global user.email build@circleci.com
     - git fetch origin
-    - git merge --no-commit origin/develop
+    - git merge --no-commit origin/master
 
 dependencies:
   override:
