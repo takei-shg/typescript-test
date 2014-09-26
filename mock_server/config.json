@@ -1,0 +1,8 @@
+{
+    "simulated-lag": 0,
+    "cors": true,
+    "jsonp": false,
+    "routes": [
+         "/api/timestamp"
+    ]
+}

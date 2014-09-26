@@ -1,0 +1,22 @@
+machine:
+  node:
+    version: 0.11.13
+
+checkout:
+  post:
+    - git config --global user.name circleci
+    - git config --global user.email build@circleci.com
+    - git fetch origin
+    - git merge --no-commit origin/develop
+
+dependencies:
+  override:
+    - npm install
+    - npm run tsd_install
+    - npm run bower_install
+    - npm run build_staging
+
+test:
+  override:
+    - npm run mock_server
+    - npm run test_ci

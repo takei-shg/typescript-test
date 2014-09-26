@@ -1,0 +1,20 @@
+{
+    "framework" : "mocha",
+    "before_tests": "npm run build",
+    "src_files" : [
+        "src/**/*.ts",
+        "test/**/*.ts"
+    ],
+    "serve_files" : [
+        "bower_components/chai/chai.js",
+        "bower_components/sinonjs/sinon.js",
+        "out/main.js",
+        "out/test/**/*.js"
+    ],
+    "proxies": {
+        "/api": {
+            "port": 3000,
+            "host": "localhost"
+        }
+    }
+}
